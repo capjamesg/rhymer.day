@@ -108,6 +108,12 @@
                             <li>{{ word }}</li>
                         {% endfor %}
                     </ul>
+                    <p>Here are some more words that rhyme with {{ word_of_the_day }}:</p>
+                    <ul>
+                        {% for word in more_rhyming_words %}
+                            <li>{{ word }}</li>
+                        {% endfor %}
+                    </ul>
                     <a id="botd-link" class="button-link" href="/">Play again</a>
                 {% else %}
                     <form action="/" method="post">

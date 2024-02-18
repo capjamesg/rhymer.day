@@ -64,6 +64,7 @@ def index():
             rhyming_words=rhyming_words,
             word_of_the_day=history[str(datetime.date.today())],
             rhyming_words_count=len(rhyming_words),
+            more_rhyming_words=[w for w in rhymes[phoneme] if w not in words],
         )
 
     return render_template(
