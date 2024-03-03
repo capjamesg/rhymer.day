@@ -101,7 +101,7 @@
             <p>Challenge resets daily.</p>
             <section id="element">
                 <h2>{{ word_of_the_day }}</h2>
-                {% if rhyming_words_count %}
+                {% if is_playing %}
                     <p>You found {{ rhyming_words_count }} word{% if rhyming_words_count > 1 %}s{% endif %} that rhymes with {{ word_of_the_day }}:</p>
                     <ul>
                         {% for word in rhyming_words %}
